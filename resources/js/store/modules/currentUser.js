@@ -27,8 +27,14 @@ const actions = {
                 )
             }
 
-            window.location.replace('/home')
+            window.location.replace('/app')
         })
+    },
+    logoutUser() {
+        //remove token
+        localStorage.removeItem('LaravelVuetify_token');
+
+        window.location.replace('/login')
     }
 };
 const mutations = {

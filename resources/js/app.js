@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vuetify from '../plugins/vuetify'
 import store from './store'
+import router from './router'
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,5 +34,6 @@ Vue.component('login-form', require('./components/loginForm.vue').default);
 const app = new Vue({
     el: '#app',
     vuetify: Vuetify,
-    store
+    store,
+    router
 });

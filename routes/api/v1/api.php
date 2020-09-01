@@ -24,3 +24,9 @@ Route::prefix('/user')->group( function() {
     Route::middleware('auth:api')->get('/all', 'api\v1\user\UserController@index');
     Route::middleware('auth:api')->get('/current', 'api\v1\user\UserController@currentUser');
 });
+
+//Products
+Route::prefix('/product')->group( function() {
+    Route::middleware('auth:api')->get('/all', 'api\v1\product\ProductController@index');
+});
+
